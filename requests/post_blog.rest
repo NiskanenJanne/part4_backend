@@ -1,0 +1,9 @@
+POST http://localhost:3004/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Uusi blogi",
+    "author": "Janne Niskanen",
+    "url": "-",
+    "likes": "0"
+}

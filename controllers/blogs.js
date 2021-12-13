@@ -25,7 +25,6 @@ blogsRouter.post('/', async (request, response) => {
     else {
       response.status(400).end()
     }
-    
 })
 
 blogsRouter.delete('/:id', async (request, response) => {

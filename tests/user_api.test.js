@@ -8,14 +8,14 @@ const User = require('../models/user')
 
 const initialUsers = [
   {
-        username: "JN97",
-        name: "Janne Saari",
-        password: "j9j9j8776"
+        username: "username1",
+        name: "user1",
+        password: "user1"
   },
   {
-        username: "aatu4",
-        name: "Aatu Lassila",
-        password: "huhhuh54"
+        username: "username2",
+        name: "user2",
+        password: "user2"
   },
 ]
 beforeEach(async () => {
@@ -38,9 +38,9 @@ test('users are returned as json', async () => {
 
 test('a valid user can be added ', async () => {
     const newUser = {
-        "username": "jakkoo33",
-        "name": "Jaakko Mustonen",
-        "password": "fvfvfv"
+        "username": "username3",
+        "name": "user3",
+        "password": "user3"
     }
 
     await api
@@ -55,15 +55,15 @@ test('a valid user can be added ', async () => {
   
 
     expect(names).toContain(
-      'Jaakko Mustonen'
+      'user3'
     )
 })
 
 test('User with short (under 3 char) username is not accepted', async () => {
     const newUser = {
-        "username": "k1",
-        "name": "Kalle Koivisto",
-        "password": "fvfvfv"
+        "username": "us",
+        "name": "user4",
+        "password": "user4"
     }
     await api
       .post('/api/users')
@@ -75,9 +75,9 @@ test('User with short (under 3 char) username is not accepted', async () => {
 
 test('User with short (under 3 char) password is not accepted', async () => {
     const newUser = {
-        "username": "kani12",
-        "name": "Kalle Nieminen",
-        "password": "fv"
+        "username": "username5",
+        "name": "user5",
+        "password": "u5"
     }
     await api
       .post('/api/users')
@@ -91,9 +91,9 @@ test('Already used username cannot be added', async () => {
    
     
     const newUser = {
-        "username": "JN97",
-        "name": "Janne Saari",
-        "password": "j9j9j8776"
+        "username": "username1",
+        "name": "user1",
+        "password": "user1"
     }
     
 

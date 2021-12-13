@@ -1,9 +1,11 @@
 POST http://localhost:3004/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ 
 
 {
     "title": "Uusi blogi",
-    "author": "Janne Niskanen",
-    "url": "-",
-    "likes": "0"
+    "author": "author",
+    "userId": "61b7b4b6e0a6d3e969fae827",
+    "url": "http://localhost:3004/",
+    "likes": "3"
 }

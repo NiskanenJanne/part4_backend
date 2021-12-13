@@ -95,6 +95,6 @@ describe('favourite blog', () => {
     const res = listHelper.favouriteBlog(blogs)
     expect(res).toEqual(blogs[2])
   })
-}
+})
   
 
